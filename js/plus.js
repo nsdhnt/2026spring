@@ -78,7 +78,7 @@ plusKeepBtn.addEventListener(`click`, ()=>{
 
     // 場所(placeValue)
     const placeValue = place.value;
-    console.log(titleValue);
+    console.log(placeValue);
 
     // 合計金額(currentPriceValue)
     const currentPriceValue = currentPrice.value;
@@ -86,9 +86,8 @@ plusKeepBtn.addEventListener(`click`, ()=>{
 
     // 払う人(payPersonValue)
     const payPersonValue = payPerson.value;
-    console.log(titleValue);
+    console.log(payPersonValue);
 
-    console.log(payPerson.value);
     const selected = Array.from(checkBoxes)
     .filter(c => c.checked)
     .map(c => c.value);
@@ -101,4 +100,27 @@ plusKeepBtn.addEventListener(`click`, ()=>{
     // 払う金額(currentPriceValue / peopleNum)
     const peopleNum = selected.length + 1;
     console.log(currentPriceValue / peopleNum)
+
+
+    // データの作成
+    const plus = {
+        title,
+        place,
+        currentPrice: Number(currentPrice),
+        payPerson,
+        checkBoxes,
+        payPrice: Number(payPrice)
+    };
+
+    // データの取得
+    const pluses = JSON.parse(localStorage.getItem("pluses")) || [];
+
+    // 追加
+    pluses.push(plus);
+
+    // 保存
+    localStorage.setItem("pluses" , JSON.stringify(pluses));
+
+    // 表示ページ
+    location.href = "index.html";
 });
