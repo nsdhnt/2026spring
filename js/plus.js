@@ -69,7 +69,13 @@ plusKeepBtn.addEventListener(`click`, ()=>{
     const place = document.querySelector(".place input");
     const currentPrice = document.querySelector(".sumPrice input");
     const payPerson = document.querySelector(".payPerson select");
-    const checkBoxes = document.querySelectorAll(".checkbox");
+    const checkBoxes = document.querySelectorAll(".checkbox:checked");
+    const checkedValues = Array.from(checkBoxes).map(box => {
+        return {
+            name: box.value, // 名前
+            img: box.parentElement.querySelector("img").getAttribute("src") // 画像
+        };
+    });
     const payPrice = document.querySelector(".payPrice");
 
     // タイトル(titleValue)
@@ -108,7 +114,7 @@ plusKeepBtn.addEventListener(`click`, ()=>{
         place,
         currentPrice: Number(currentPrice),
         payPerson,
-        checkBoxes,
+        checkBoxes: checkedValues,
         payPrice: Number(payPrice)
     };
 
