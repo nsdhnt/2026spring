@@ -1,6 +1,12 @@
 html{
     font-size: 62.5%;
 }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 
 header{
     background-color: #FFD374;
@@ -17,6 +23,79 @@ header{
         position: relative;
     }
 }
+
+main{
+    padding: 30px 25px;
+}
+
+.content{
+    h2{
+        font-size: 2rem;
+        color: #5A3E2B;
+        padding-bottom: 20px;
+    }
+
+    article{
+        background: #FFD374;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 30px;
+        padding: 18px 18px 18px 30px;
+        border-radius: 40px;
+        height: 145px;
+
+        .title{
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            h3{
+                font-size: 1.8rem;
+                color: #5A3E2B;
+            }
+            time{
+                color: rgba(90, 62, 43, 0.70);
+                font-weight: bold;
+            }
+        }
+
+        p{
+            font-size: 1.4rem;
+            color: #5A3E2B;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+
+        ul{
+            display: flex;
+            gap: 12px;
+            li > img{
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+            }
+            .more::before{
+                content: "...";
+                font-size: 2rem;
+                color: #5A3E2B;
+            }
+        }
+    }
+
+    .text{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .detail{
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #5A3E2B;
+        padding: 5px 5px 10px 10px;
+    }
+}
+
+
 
 footer{
     background-color: #FFD374;
