@@ -10,6 +10,7 @@ header{
         width: 100%;
         height: 100%;
         font-size: 2rem;
+        font-weight: bold;
         color: #5A3E2B;
         display: flex;
         justify-content: center;
@@ -28,6 +29,7 @@ header{
             bottom: 0;
             left: 27px;
             margin: auto;
+            /* border: solid 1px tomato; */
         }
     }
 }
@@ -51,6 +53,7 @@ main{
                 padding: 0 8px;
                 color: #5A3E2B;
                 margin-top: 8px;
+                font-size: 1.6rem;
             }
             select{
                 width: 100%;
@@ -78,9 +81,11 @@ main{
                 font-size: 1.2rem;
             }
             fieldset{
+                display: none;
                 width: 100%;
                 border-radius: 10px;
                 box-shadow: 0 0 4px #ccc;
+                user-select: none;
                 /* background-color: #FFD374; */
                 border: none;
                 label{
@@ -100,29 +105,8 @@ main{
                     }
                 }
             }
-            /* .optionBox{
-                width: 100%;
-                height: 200px;
-                border-radius: 10px;
-                box-shadow: 0 0 4px #999;
-                display: flex;
-                label{
-                    padding: 10px;
-                    width: 100%;
-                    box-sizing: border-box;
-                    border: solid 1px tomato;
-                    input{
-                        display: block;
-                        width: 100%;
-                        height: 30px;
-                    }
-                    span{
-                        flex: 1;
-                    }
-                }
-            } */
         }
-        button{
+        .calc, .plusKeep{
             width: 100%;
             height: 50px;
             background-color: #FFD374;
@@ -130,7 +114,7 @@ main{
             justify-content: center;
             align-items: center;
             border-radius: 50px;
-            margin-top: 50px;
+            margin-top: 30px;
             color: #5A3E2B;
         }
     }

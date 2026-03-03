@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/plus.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="js/plus.js"></script>
     <title>わりペイ</title>
 </head>
 <body>
@@ -31,9 +32,9 @@
                 <label for="payPerson">払う人</label>
                 <select name="payPerson" id="payPerson">
                     <option value="null"></option>
-                    <option value="tanaka">田中</option>
-                    <option value="yamaguchi">山口</option>
-                    <option value="micchan">みっちゃん</option>
+                    <option value="田中">田中</option>
+                    <option value="山口">山口</option>
+                    <option value="みっちゃん">みっちゃん</option>
                 </select>
             </div>
             <div class="payPersonLate">
@@ -42,32 +43,21 @@
                 <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend"></legend>
                     <label class="label">
-                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <input type="checkbox" class="checkbox" value="山口"/>
                         <img src="img/icon_yamaguchi.png" alt="">山口
                     </label>
                     <label class="label">
-                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <input type="checkbox" class="checkbox" value="みっちゃん"/>
                         <img src="img/icon_micchan.png" alt="">みっちゃん
                     </label>
                 </fieldset>
-                <!-- <div class="optionBox">
-                    <label for="payPersonLate">
-                        <input class="input" type="checkbox">
-                        <span>田中</span>
-                    </label>
-                </div> -->
-                <!-- <select name="payPerson[]" id="payPersonLate">
-                    <option value="null"></option>
-                    <option value="tanaka">田中</option>
-                    <option value="yamaguchi">山口</option>
-                    <option value="micchan">みっちゃん</option>
-                </select> -->
             </div>
             <div class="payPrice">
                 <label for="payPrice">払う金額</label>
                 <input class="input" type="text" value="" readonly>
             </div>
-            <button type="button">追加する</button>
+            <button type="button" class="calc">計算する</button>
+            <button type="button" class="plusKeep">追加する</button>
         </form>
     </main>
     <footer>
