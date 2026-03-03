@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/history.css">
+    <script defer src="js/history.js"></script>
     <title>わりペイ</title>
 </head>
 <body>
@@ -13,19 +14,19 @@
     </header>
     <main>
         <div class="title">
-            <h2>昼ごはん</h2>
+            <h2 class="title"></h2>
             <time datetime="2026-03-02">2026/03/02</time>
         </div>
         <div class="info">
-            <p><img src="img/icon_pin.png" alt="">サイゼリヤ</p>
-            <p><img src="img/icon_price.png" alt="">3,000円</p>
+            <p class="place"><img src="img/icon_pin.png" alt=""></p>
+            <p class="pay"><img src="img/icon_price.png" alt=""></p>
         </div>
         <div class="member">
             <h3>参加メンバー</h3>
             <div class="payEarlyWrap">
                 <div class="payCard">
                     <img src="img/icon_tanaka.png" alt="">
-                    <p>田中<span>（払った人）</span></p>
+                    <p class="currentPrice">田中<span>（払った人）</span></p>
                 </div>
                 <div class="payEarlyUsage">
                     <h3>支払い方法</h3>
@@ -44,9 +45,9 @@
                     <div class="payCard">
                         <div class="payCardLeft">
                             <img src="img/icon_yamaguchi.png" alt="">
-                            <p>山口<span>（自分）</span></p>
+                            <p class="payPerson"><span>（自分）</span></p>
                         </div>
-                        <p>1,000円</p>
+                        <p class="payPrice"></p>
                     </div>
                 </div>
                 <div class="payLate">
@@ -57,9 +58,9 @@
                     <div class="payCard">
                         <div class="payCardLeft">
                             <img src="img/icon_micchan.png" alt="">
-                            <p>みっちゃん</p>
+                            <p class="payPerson"></p>
                         </div>
-                        <p>1,000円</p>
+                        <p class="payPrice"></p>
                     </div>
                 </div>
             </div>
