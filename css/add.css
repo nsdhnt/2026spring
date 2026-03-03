@@ -74,3 +74,63 @@ body {
     font-weight: bold;
     color: #5A3E2B;
 }
+
+/* モーダルの表示 */
+.qr-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: background-color 0.3s;
+}
+
+.sheet-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+
+.qr-sheet.active {
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.qr-sheet.active .sheet-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.my-qr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #5A3E2B;
+    font-weight: bold;
+    p{
+        font-size: 2rem;
+    }
+}
+
+.my-qr-wrapper img {
+    width: 200px;
+    margin-bottom: 20px;
+}
