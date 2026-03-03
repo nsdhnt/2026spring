@@ -46,7 +46,7 @@ main{
         background: #FFD374;
         width: 70px;
         height: 40px;
-        border-radius: 8px;
+        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -82,7 +82,7 @@ main{
 .payBox{
     background: rgba(255, 211, 116, 0.40);
     border: solid 2px #FFD374;
-    border-radius: 8px;
+    border-radius: 10px;
     height: 40px;
     display: flex;
     align-items: center;
