@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/add.css">
+    <script defer src="js/add.js"></script>
+    <title>わりペイ</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">友達追加</a></h1>
+    </header>
+    <main class="main">
+        <div class="qr-container">
+            <div class="qr-box"></div>
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </div>
+        <button class="qr-button" id="openBtn">QRコード</button>
+        <div class="qr-sheet" id="qrSheet">
+            <div class="sheet-content">
+                <span class="close-btn" id="closeBtn">×</span>
+                <div class="my-qr-wrapper">
+                    <img src="img/qr.png" alt="My QR Code">
+                    <p>マイQRコード</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="account.html"><img src="img/nav_account.png" alt="account">アカウント</a></li>
+                <li><a href="plus.html"><img src="img/nav_plus.png" alt="plus">追加</a></li>
+                <li><a href="friend.html"><img src="img/nav_friend.png" alt="friend">友達</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

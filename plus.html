@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/ress.css"> -->
+    <link rel="stylesheet" href="css/plus.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="js/plus.js"></script>
+    <title>わりペイ</title>
+</head>
+<body>
+    <header>
+        <h1>追加</h1>
+    </header>
+    <main>
+        <form action="" method="get">
+            <div class="title">
+                <label for="title">タイトル</label>
+                <input class="input" type="text" value="">
+            </div>
+            <div class="place">
+                <label for="place">場所</label>
+                <input class="input" type="text" value="">
+            </div>
+            <div class="sumPrice">
+                <label for="sumPrice">合計金額</label>
+                <input class="input" type="text" value="">
+            </div>
+            <div class="payPerson">
+                <label for="payPerson">払う人</label>
+                <select name="payPerson" id="payPerson">
+                    <option value="null"></option>
+                    <option value="田中">田中</option>
+                    <option value="山口">山口</option>
+                    <option value="みっちゃん">みっちゃん</option>
+                </select>
+            </div>
+            <div class="payPersonLate">
+                <label for="payPersonLate">あとで払う人</label>
+                <p>▶︎</p>
+                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                    <legend class="fieldset-legend"></legend>
+                    <label class="label">
+                        <input type="checkbox" class="checkbox" value="山口">
+                        <img src="/img/icon_yamaguchi.png" alt="">山口
+                    </label>
+                    <label class="label">
+                        <input type="checkbox" class="checkbox" value="みっちゃん">
+                        <img src="/img/icon_micchan.png" alt="">みっちゃん
+                    </label>
+                </fieldset>
+            </div>
+            <div class="payPrice">
+                <label for="payPrice">払う金額</label>
+                <input class="input" type="text" value="" readonly>
+            </div>
+            <button type="button" class="calc">計算する</button>
+            <button type="button" class="plusKeep">追加する</button>
+        </form>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="account.html"><img src="img/nav_account.png" alt="account">アカウント</a></li>
+                <li><a href="plus.html"><img src="img/nav_plus.png" alt="plus">追加</a></li>
+                <li><a href="friend.html"><img src="img/nav_friend.png" alt="friend">友達</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
