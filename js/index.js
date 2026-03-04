@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const homeBtn = document.querySelector(".deleat"); // ホームボタン
 
     if (pluses.length === 0) {
-        if (card) card.style.display = "none";   // データなし → 非表示
+        if (card) card.style.display = "none";   // データなし  非表示
         return;
     }
 
@@ -20,14 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (titleElem) titleElem.textContent = plus.title;
 
     // 画像表示
-    const payArea = document.getElementsByClassName("pay")[0];
+    const payArea = document.querySelector(".pay");
     if (payArea) {
         payArea.innerHTML = "";  // リセット
-        plus.checkBoxes.forEach(src => {
+
+        plus.checkBoxes.forEach(data => {
             const img = document.createElement("img");
-            img.src = src;
+
+            img.src = data.img;
             img.style.width = "30px";
-            img.style.marginRight = "30px";
+            img.style.marginRight = "10px";
+
             payArea.appendChild(img);
         });
     }
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ホームを押したらデータを消す
     if (homeBtn) {
         homeBtn.addEventListener("click", (e) => {
-            e.preventDefault(); // aタグの # でページが跳ばないようにする
+            e.preventDefault();
             localStorage.removeItem("pluses"); // データ削除
             if (card) card.style.display = "none";
             if (Box) Box.style.display = "none";
