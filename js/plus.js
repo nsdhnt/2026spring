@@ -65,18 +65,17 @@ calcBtn.addEventListener(`click`, ()=>{
 
 // 「追加する」ボタン
 plusKeepBtn.addEventListener(`click`, ()=>{
-    const title = document.querySelector(".title input");
-    const place = document.querySelector(".place input");
-    const currentPrice = document.querySelector(".sumPrice input");
-    const payPerson = document.querySelector(".payPerson select");
+    const title = document.querySelector(".title input").value;
+    const place = document.querySelector(".place input").value;
+    const currentPrice = document.querySelector(".sumPrice input").value;
+    const payPerson = document.querySelector(".payPerson select").value;
+    const payPrice = document.querySelector(".payPrice input").value;
     const checkBoxes = document.querySelectorAll(".checkbox:checked");
-    const checkedValues = Array.from(checkBoxes).map(box => {
-        return {
-            name: box.value, // 名前
-            img: box.parentElement.querySelector("img").getAttribute("src") // 画像
-        };
-    });
-    const payPrice = document.querySelector(".payPrice");
+
+    const checkedValues = Array.from(checkBoxes).map(box => ({
+        name: box.value, 
+        img: box.parentElement.querySelector("img").getAttribute("src")
+    }));
 
     // タイトル(titleValue)
     const titleValue = title.value;
@@ -110,10 +109,10 @@ plusKeepBtn.addEventListener(`click`, ()=>{
 
     // データの作成
     const plus = {
-        title,
-        place,
+        title: title,
+        place: place,
         currentPrice: Number(currentPrice),
-        payPerson,
+        payPerson: payPerson,
         checkBoxes: checkedValues,
         payPrice: Number(payPrice)
     };
