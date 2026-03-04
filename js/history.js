@@ -21,51 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
         payElem.innerHTML = `<img src="img/icon_price.png" alt="">${plus.currentPrice}円`;
     }
 
-    // // 参加メンバー
-    // const payLateImgs = document.querySelectorAll(".payLateWrap .payCardLeft img");
-    // plus.checkBoxes.forEach((src, i) => {
-    //     if (payLateImgs[i]) {
-    //         payLateImgs[i].src = src;
-    //     }
-    // });
+    // 先に払う人
+    const payPerson = document.querySelector(".currentPrice");
+    if (payPerson) payPerson.textContent = plus.payPerson;
 
-    // // 払う人
-    // const payPersons = document.querySelectorAll(".payLateWrap .payPerson");
-    // payPersons.forEach((elem, i) => {
-    //     if (i === 0) {
-    //         // 自分
-    //         elem.innerHTML = `<span>（自分）</span>`;
-    //     } else if (plus.checkBoxes[i]) {
-    //         elem.textContent = ""; 
-    //     }
-    // });
-
-    // // 個別の支払金額
-    // const payPrices = document.querySelectorAll(".payLateWrap .payPrice");
-    // if (plus.payPrice) {
-    //     payPrices.forEach((p, i) => {
-    //         p.textContent = `${plus.payPrice}円`;
-    //     });
-    // }
-
-    // payLate の要素をすべて取得
-    const payCard = document.querySelectorAll(".payCard");
-
+    // 参加メンバーの画像と名前
+    const payLateElems = document.querySelectorAll(".payLateWrap .payLate");
     plus.checkBoxes.forEach((data, i) => {
-        const payLate = payCard[i];
+        const payLate = payLateElems[i]; 
         if (!payLate) return;
 
-        const cardLeft = payCard[i].querySelector(".payCardLeft");
-        const imgElem = cardLeft?.querySelector("img");
-        const nameElem = cardLeft?.querySelector(".payPerson");
-        const priceElem = payCard[i].querySelector(".payPrice");
+        const imgElem = payLate.querySelector(".payCardLeft img");
+        const nameElem = payLate.querySelector(".payPerson");
+        const priceElem = payLate.querySelector(".payPrice");
 
-        // 画像と名前をセット
         if (imgElem) imgElem.src = data.img;
-        if (nameElem) nameElem.textContent = i === 0 ? `${data.name}（自分）` : data.name;
-
-        // 支払金額
-        if (priceElem) priceElem.textContent = `${plus.payPrice}円`;
+        if (nameElem) {
+            nameElem.innerHTML = data.name;
+        }
+        if (priceElem && plus.payPrice) priceElem.textContent = `${plus.payPrice}円`;
     });
 
 });
